@@ -19,4 +19,5 @@ jobs:
         with:
           branch: dev-promotion
           delete-branch: true
+          title: promote main to dev
 
