@@ -13,8 +13,8 @@ jobs:
         uses: devops-infra/action-pull-request@v0.5.5
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          source_branch: dev
-          target_branch: main
+          source_branch: main
+          target_branch: dev
           title: promote main to dev
           get_diff: true
       
