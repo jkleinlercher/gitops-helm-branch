@@ -18,4 +18,5 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           branch: dev-promotion
+          delete-branch: true
 
