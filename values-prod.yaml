@@ -90,8 +90,8 @@ ingress:
   annotations: {}
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: test-sx-podtato-sx-podtato.apps.cluster1.mcp.pitagora.at
-      paths: 
+    - host: suxess-it-prod-podtato-head.apps.cluster1.mcp.pitagora.at
+      paths:
         - path: /
           pathType: ImplementationSpecific
   tls: []
