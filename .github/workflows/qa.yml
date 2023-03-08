@@ -1,0 +1,22 @@
+name: Create prod promotion pull request
+on:
+  push:
+    branches:
+      - qa
+jobs:
+  devPromotion:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: prod
+      - name: Reset promotion branch
+        run: |
+          git fetch origin qa:qa
+          git reset --hard qa
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          branch: prod-promotion
+          delete-branch: true
+          title: promote qa to prod
