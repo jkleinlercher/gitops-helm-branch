@@ -10,7 +10,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          ref: main
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: dev
       - name: GitHub Action for creating Pull Requests
         uses: devops-infra/action-pull-request@v0.5.5
         with:
