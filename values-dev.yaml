@@ -1,7 +1,7 @@
 # applies to podtato-head-entry deployment only
 ingress:
   hosts:
-    - host: suxess-it-dev-podtato-head.apps.cluster1.mcp.pitagora.at
+    - host: suxess-it-dev2-podtato-head.apps.cluster1.mcp.pitagora.at
       paths:
         - path: /
           pathType: ImplementationSpecific
