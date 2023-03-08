@@ -7,6 +7,8 @@ jobs:
   devPromotion:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
       - name: GitHub Action for creating Pull Requests
         uses: devops-infra/action-pull-request@v0.5.5
         with:
