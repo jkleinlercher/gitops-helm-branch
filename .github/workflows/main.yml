@@ -1,22 +1,22 @@
+name: Create production promotion pull request
 on:
   push:
     branches:
       - main
-
 jobs:
-  create-pull-reqest:
-    name: create pull request
+  devPromotion:
     runs-on: ubuntu-latest
-    environment: production
-
     steps:
       - uses: actions/checkout@v3
-
-      # no need to do anything here, we just want to create pull request from dev to main
-
+        with:
+          ref: dev
+      - name: Reset promotion branch
+        run: |
+          git fetch origin main:main
+          git reset --hard main
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
-          branch: dev
+          branch: dev-promotion
       
 
