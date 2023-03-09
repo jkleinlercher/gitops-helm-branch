@@ -41,7 +41,7 @@ leftArm:
   servicePort: 9003
   env:
     - name: PODTATO_PART_NUMBER
-      value: "03"
+      value: "02"
 rightLeg:
   repositoryBasename: right-leg
   tag: "latest"
