@@ -10,7 +10,7 @@ jobs:
       - name: Sync ArgoCD Application
         uses: omegion/argocd-actions@master
         with:
-          address: "argocd-suxess-it-admin.apps.cluster1.mcp.pitagora.at/"
+          address: "argocd-suxess-it-admin.apps.cluster1.mcp.pitagora.at"
           token: ${{ secrets.ARGOCD_TOKEN }}
           action: sync
           appName: "podtato-head-dev"
