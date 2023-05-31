@@ -4,6 +4,17 @@ on:
     branches:
       - qa
 jobs:
+  argocdSync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync ArgoCD Application
+        uses: omegion/argocd-actions@master
+        with:
+          address: "argocd-suxess-it-admin.apps.cluster1.mcp.pitagora.at"
+          token: ${{ secrets.ARGOCD_TOKEN }}
+          action: sync
+          appName: "podtato-head-qa"
+          
   prodPromotion:
     runs-on: ubuntu-latest
     steps:
