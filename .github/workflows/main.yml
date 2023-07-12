@@ -4,6 +4,18 @@ on:
     branches:
       - main
 jobs:
+  deprecatedAPIsCheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout git repo
+        uses: actions/checkout@v3
+        with:
+          ref: main
+      - name: Download Pluto
+        uses: FairwindsOps/pluto/github-action@master
+      - name: Check Deprecations in Helm-Chart
+        run: |
+          helm template . | pluto detect -
   devPromotion:
     runs-on: ubuntu-latest
     steps:
