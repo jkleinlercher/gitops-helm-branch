@@ -15,7 +15,7 @@ jobs:
         uses: FairwindsOps/pluto/github-action@master
       - name: Check Deprecations in Helm-Chart
         run: |
-          helm template . | pluto detect -
+          helm template . | pluto detect -owide -
   devPromotion:
     runs-on: ubuntu-latest
     steps:
